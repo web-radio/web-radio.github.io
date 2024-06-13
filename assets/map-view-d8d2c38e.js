@@ -1,1 +1,0 @@
-import{d as n,e as o,f as t,o as a,C as r}from"./index-27e4d4f3.js";const m=n({__name:"map-view",setup(p){return(e,s)=>(a(),o(t(r),{type:"info",icon:"map",text:e.$t("commingSoon")},null,8,["text"]))}});export{m as default};
