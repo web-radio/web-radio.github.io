@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "explore": "Explore",
+    "search": "Search",
+    "map": "Map",
+    "history": "History",
+    "voted": "Voted",
+    "settings": "Settings"
+  },
+  "exploreViewSections": {
+    "mostPopular": "Most popular",
+    "lastListened": "Last listened",
+    "gainingPopularity": "Gaining popularity",
+    "mostLiked": "Most liked",
+    "lastChanged": "Last changed",
+    "nowPlaying": "Now playing",
+    "random": "Random"
+  },
+  "station": {
+    "name": "Name",
+    "withoutName": "Without name",
+    "generalInformation": "General information",
+    "id": "ID",
+    "verified": "Verified",
+    "website": "Website",
+    "tags": "Tags",
+    "location": "Location",
+    "language": "Language",
+    "votes": "Votes",
+    "clicks24h": "Clicks (last 24h)",
+    "audioSource": "Audio source",
+    "codec": "Codec",
+    "bitrate": "Bitrate",
+    "country": "Country"
+  },
+  "actions": {
+    "play": "Play",
+    "stop": "Stop",
+    "vote": "Vote",
+    "voted": "Voted"
+  },
+  "commingSoon": "Comming soon",
+  "yes": "Yes",
+  "no": "No",
+  "noInternetConnection": "No internet connection",
+  "error": "An error occured",
+  "moreResults": "More results",
+  "noHistory": "No history",
+  "noVoted": "No voted",
+  "noResults": "No results",
+  "noStationsRegion": "No stations in this region",
+  "stationNotFound": "Station not found",
+  "moreInfo": "More information",
+  "settings": {
+    "applicationLanguage": "Application language",
+    "clearHistory": "Clear history",
+    "countryExploreView": "Country of stations displayed in explore view",
+    "about": "About",
+    "apis": "APIs used"
+  },
+  "all": "All"
+}

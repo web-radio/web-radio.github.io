@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "explore": "Odkrywaj",
+    "search": "Szukaj",
+    "map": "Mapa",
+    "history": "Historia",
+    "voted": "Zagłosowane",
+    "settings": "Ustawienia"
+  },
+  "exploreViewSections": {
+    "mostPopular": "Najpopularniejsze",
+    "lastListened": "Ostatnio słuchane",
+    "gainingPopularity": "Zyskujące popularność",
+    "mostLiked": "Najbardziej lubiane",
+    "lastChanged": "Ostatnio zmienione",
+    "nowPlaying": "Teraz odtwarzane",
+    "random": "Losowe"
+  },
+  "station": {
+    "name": "Nazwa",
+    "withoutName": "Bez nazwy",
+    "generalInformation": "Ogólne informacje",
+    "id": "Identyfikator",
+    "verified": "Zweryfikowana",
+    "website": "Strona internetowa",
+    "tags": "Tagi",
+    "location": "Lokalizacja",
+    "language": "Język",
+    "votes": "Głosy",
+    "clicks24h": "Kliknięcia (ostatnie 24h)",
+    "audioSource": "Źródło audio",
+    "codec": "Kodeka",
+    "bitrate": "Bitrate",
+    "country": "Kraj"
+  },
+  "actions": {
+    "play": "Odtwórz",
+    "stop": "Zatrzymaj",
+    "vote": "Zagłosuj",
+    "voted": "Zagłosowano"
+  },
+  "commingSoon": "Wkrótce",
+  "yes": "Tak",
+  "no": "Nie",
+  "noInternetConnection": "Brak połączenia z internetem",
+  "error": "Wystąpił błąd",
+  "moreResults": "Więcej wyników",
+  "noHistory": "Brak historii",
+  "noVoted": "Brak zagłosowanych stacji",
+  "noResults": "Brak wyników",
+  "noStationsRegion": "Brak stacji w tym regionie",
+  "stationNotFound": "Nie znaleziono stacji",
+  "moreInfo": "Więcej informacji",
+  "settings": {
+    "applicationLanguage": "Język aplikacji",
+    "clearHistory": "Wyczyść historię",
+    "countryExploreView": "Kraj stacji wyświetlanych w widoku odkrywaj",
+    "about": "O aplikacji",
+    "apis": "Używane interfejsy API"
+  },
+  "all": "Wszystkie"
+}
