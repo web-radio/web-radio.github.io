@@ -8,7 +8,7 @@ interface NavigationItem {
   icon: string;
 }
 const mobile = window.innerWidth <= 750;
-const miniNav = ref(false);
+const miniNav = ref(true);
 const navigationItems: NavigationItem[] = [
   {
     link: '/',
