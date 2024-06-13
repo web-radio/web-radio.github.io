@@ -65,6 +65,7 @@ onMounted(async () => await loadCountries());
               </a>
             </li>
           </ul>
+          <a href="https://github.com/web-radio/web-radio.github.io">GitHub</a>
           <div style="text-align: center">
             2023 - {{ new Date().getFullYear() }}
           </div>
