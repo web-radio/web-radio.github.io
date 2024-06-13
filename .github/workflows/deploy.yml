@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 16.x
       - run: npm install
-      - run: npm run build
+      - run: npm run only-build
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
