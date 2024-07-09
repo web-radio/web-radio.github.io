@@ -32,6 +32,8 @@ export const useAppStore = defineStore('app', () => {
     }
   }
 
+  const cardMoreChips = ref(false);
+
   return {
     exploreViewCountry,
     setExploreViewCountry,
@@ -39,5 +41,6 @@ export const useAppStore = defineStore('app', () => {
     apiClient,
     fullscreen,
     toggleFullscreen,
+    cardMoreChips
   };
 });

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { usePlayerStore } from '@/stores';
+import { useAppStore, usePlayerStore } from '@/stores';
 import { getFlagEmoji } from '@/utils';
 import type { Station } from 'radiobrowser-api-client';
 import { ref } from 'vue';
@@ -11,6 +11,7 @@ defineProps<{
 
 const router = useRouter();
 const playerStore = usePlayerStore();
+const appStore = useAppStore();
 const logoError = ref(false);
 </script>
 
@@ -48,7 +49,10 @@ const logoError = ref(false);
             data.countryName.length <= 20 ? data.countryName : data.countryCode
           }}<template v-if="data.state">, {{ data.state }}</template>
         </div>
-        <div class="card__details-chip" v-if="data.languageNames">
+        <div
+          class="card__details-chip"
+          v-if="data.languageNames && appStore.cardMoreChips"
+        >
           <span class="material-symbols-rounded">translate</span>
           {{
             data.languageNames.length <= 20 || !data.languageCodes
@@ -69,7 +73,10 @@ const logoError = ref(false);
           <span class="material-symbols-rounded">thumb_up</span>
           {{ data.votes }}
         </div>
-        <div class="card__details-chip" v-if="data.clickTrend !== 0">
+        <div
+          class="card__details-chip"
+          v-if="data.clickTrend !== 0 && appStore.cardMoreChips"
+        >
           <span class="material-symbols-rounded">{{
             data.clickTrend > 0 ? 'trending_up' : 'trending_down'
           }}</span>
@@ -78,7 +85,10 @@ const logoError = ref(false);
         <div class="card__details-chip" v-if="data.codec !== 'UNKNOWN'">
           <span class="material-symbols-rounded">album</span> {{ data.codec }}
         </div>
-        <div class="card__details-chip" v-if="data.bitrate">
+        <div
+          class="card__details-chip"
+          v-if="data.bitrate && appStore.cardMoreChips"
+        >
           <span class="material-symbols-rounded">speed</span>
           {{ data.bitrate }} kbps
         </div>
@@ -192,7 +202,7 @@ const logoError = ref(false);
     grid-row-gap: 10px;
     border: 1px solid #ffffff10;
     border-radius: 7px;
-    padding: 20px 17.5px;
+    padding: 18px;
     height: 100%;
 
     .card__image {
@@ -226,12 +236,12 @@ const logoError = ref(false);
       font-size: 0.9em;
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 7px;
       max-height: 62px;
       overflow: hidden;
 
       .card__details-chip {
-        padding: 2px 8px;
+        padding: 2px 7px;
         border-radius: 5px;
         border: #ffffff10 solid 1px;
         background: #ffffff03;

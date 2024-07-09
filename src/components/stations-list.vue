@@ -175,6 +175,10 @@ onDeactivated(() => {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  margin-top: 20px;
+  &:first-child {
+    margin-top: 0;
+  }
   .stations-list__cards {
     width: auto;
     display: grid;
