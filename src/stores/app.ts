@@ -1,7 +1,7 @@
 import { formatLanguage } from '@/utils';
 import { useStorage } from '@vueuse/core';
 import { defineStore } from 'pinia';
-import { RadioBrowserClient } from 'radiobrowser-api-client';
+import { Country, Language, RadioBrowserClient } from 'radiobrowser-api-client';
 import { ref } from 'vue';
 
 export const useAppStore = defineStore('app', () => {
@@ -11,6 +11,7 @@ export const useAppStore = defineStore('app', () => {
   function setExploreViewCountry(country: string) {
     exploreViewCountry.value = country;
   }
+  const exploreViewLanguage = useStorage<string>('exploreViewLanguage', 'all');
 
   const language = useStorage<string>(
     'language',
@@ -32,15 +33,27 @@ export const useAppStore = defineStore('app', () => {
     }
   }
 
-  const cardMoreChips = ref(false);
+  const countries = ref<Country[]>([]);
+  function setCountries(newValue: Country[]) {
+    countries.value = newValue;
+  }
+
+  const languages = ref<Language[]>([]);
+  function setLanguages(newValue: Language[]) {
+    languages.value = newValue;
+  }
 
   return {
     exploreViewCountry,
     setExploreViewCountry,
+    exploreViewLanguage,
     language,
     apiClient,
     fullscreen,
     toggleFullscreen,
-    cardMoreChips
+    countries,
+    setCountries,
+    languages,
+    setLanguages,
   };
 });

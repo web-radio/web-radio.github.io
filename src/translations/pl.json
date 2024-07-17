@@ -58,5 +58,10 @@
     "about": "O aplikacji",
     "apis": "Używane interfejsy API"
   },
+  "search": {
+    "sortByName": "Sortuj wg. nazwy",
+    "sortByPopularity": "Sortuj wg. popularności",
+    "sortByVotes": "Sortuj wg. głosów"
+  },
   "all": "Wszystkie"
 }

@@ -41,6 +41,9 @@ const logoError = ref(false);
       </div>
       <div class="card__name">
         {{ data.name.trim() ? data.name.trim() : $t('withoutName') }}
+        <span class="material-symbols-rounded" v-if="data.hasExtendedInfo"
+          >verified</span
+        >
       </div>
       <div class="card__details">
         <div class="card__details-chip" v-if="data.countryCode">
@@ -49,10 +52,7 @@ const logoError = ref(false);
             data.countryName.length <= 20 ? data.countryName : data.countryCode
           }}<template v-if="data.state">, {{ data.state }}</template>
         </div>
-        <div
-          class="card__details-chip"
-          v-if="data.languageNames && appStore.cardMoreChips"
-        >
+        <div class="card__details-chip" v-if="data.languageNames">
           <span class="material-symbols-rounded">translate</span>
           {{
             data.languageNames.length <= 20 || !data.languageCodes
@@ -73,22 +73,10 @@ const logoError = ref(false);
           <span class="material-symbols-rounded">thumb_up</span>
           {{ data.votes }}
         </div>
-        <div
-          class="card__details-chip"
-          v-if="data.clickTrend !== 0 && appStore.cardMoreChips"
-        >
-          <span class="material-symbols-rounded">{{
-            data.clickTrend > 0 ? 'trending_up' : 'trending_down'
-          }}</span>
-          <template v-if="data.clickTrend > 0">+</template>{{ data.clickTrend }}
-        </div>
         <div class="card__details-chip" v-if="data.codec !== 'UNKNOWN'">
           <span class="material-symbols-rounded">album</span> {{ data.codec }}
         </div>
-        <div
-          class="card__details-chip"
-          v-if="data.bitrate && appStore.cardMoreChips"
-        >
+        <div class="card__details-chip" v-if="data.bitrate">
           <span class="material-symbols-rounded">speed</span>
           {{ data.bitrate }} kbps
         </div>
@@ -229,6 +217,10 @@ const logoError = ref(false);
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+
+      .material-symbols-rounded {
+        font-size: inherit !important;
+      }
     }
 
     .card__details {
