@@ -26,7 +26,7 @@ watch(station, () => {
     <div class="material-symbols-rounded fullscreen__image" v-else>radio</div>
     <div class="player-bar-fullscreen__text">
       <div class="player-bar-fullscreen__title">
-        {{ playerStore.station!.name.trim() ?? $t('withoutName') }}
+        {{ playerStore.station!.name.trim() ?? $t('station.withoutName') }}
       </div>
       <div
         class="player-bar-fullscreen__description"

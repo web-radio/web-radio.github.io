@@ -40,7 +40,7 @@ const logoError = ref(false);
         radio
       </div>
       <div class="card__name">
-        {{ data.name.trim() ? data.name.trim() : $t('withoutName') }}
+        {{ data.name.trim() ? data.name.trim() : $t('station.withoutName') }}
         <span class="material-symbols-rounded" v-if="data.hasExtendedInfo"
           >verified</span
         >

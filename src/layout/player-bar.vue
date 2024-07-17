@@ -24,7 +24,7 @@ watch(station, () => {
     />
     <div class="material-symbols-rounded player-bar__image" v-else>radio</div>
     <div class="player-bar__title">
-      {{ playerStore.station.name.trim() ?? $t('withoutName') }}
+      {{ playerStore.station.name.trim() ?? $t('station.withoutName') }}
     </div>
     <div
       class="player-bar__description"
