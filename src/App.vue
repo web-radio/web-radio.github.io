@@ -36,6 +36,8 @@ onBeforeMount(async () => {
     const userCountry = await getUserCountryCode();
     appStore.setExploreViewCountry(userCountry);
   }
+  appStore.setCountries(await appStore.apiClient.getCountries({}));
+  appStore.setLanguages(await appStore.apiClient.getLanguages({}));
   loading.value = false;
 });
 </script>

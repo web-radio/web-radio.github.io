@@ -58,5 +58,10 @@
     "about": "About",
     "apis": "APIs used"
   },
+  "search": {
+    "sortByName": "Sort by name",
+    "sortByPopularity": "Sort by popularity",
+    "sortByVotes": "Sort by votes"
+  },
   "all": "All"
 }

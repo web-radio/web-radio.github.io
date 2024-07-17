@@ -53,16 +53,17 @@ async function loadMoreStations() {
 }
 
 async function getStations() {
-  if (props.stationsUUIDs) {
-    return await appStore.apiClient.getStationsByUUIDs({
-      stationUUIDs: props.stationsUUIDs,
-    });
-  } else {
-    return await appStore.apiClient.searchStations({
-      ...{ offset: stations.value?.length },
-      ...props.params,
-    });
-  }
+  if (props.stationsUUIDs)
+    return sortStations(
+      props.stationsUUIDs,
+      await appStore.apiClient.getStationsByUUIDs({
+        stationUUIDs: props.stationsUUIDs,
+      })
+    );
+  return await appStore.apiClient.searchStations({
+    ...{ offset: stations.value?.length },
+    ...props.params,
+  });
 }
 let timeout: any = null;
 
@@ -175,6 +176,11 @@ onDeactivated(() => {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  margin-top: 40px;
+
+  &:first-child {
+    margin-top: 0 !important;
+  }
   .stations-list__cards {
     width: auto;
     display: grid;

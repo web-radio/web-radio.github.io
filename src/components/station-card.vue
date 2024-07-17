@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { usePlayerStore } from '@/stores';
+import { useAppStore, usePlayerStore } from '@/stores';
 import { getFlagEmoji } from '@/utils';
 import type { Station } from 'radiobrowser-api-client';
 import { ref } from 'vue';
@@ -11,6 +11,7 @@ defineProps<{
 
 const router = useRouter();
 const playerStore = usePlayerStore();
+const appStore = useAppStore();
 const logoError = ref(false);
 </script>
 
@@ -40,6 +41,9 @@ const logoError = ref(false);
       </div>
       <div class="card__name">
         {{ data.name.trim() ? data.name.trim() : $t('withoutName') }}
+        <span class="material-symbols-rounded" v-if="data.hasExtendedInfo"
+          >verified</span
+        >
       </div>
       <div class="card__details">
         <div class="card__details-chip" v-if="data.countryCode">
@@ -68,12 +72,6 @@ const logoError = ref(false);
         <div class="card__details-chip">
           <span class="material-symbols-rounded">thumb_up</span>
           {{ data.votes }}
-        </div>
-        <div class="card__details-chip" v-if="data.clickTrend !== 0">
-          <span class="material-symbols-rounded">{{
-            data.clickTrend > 0 ? 'trending_up' : 'trending_down'
-          }}</span>
-          <template v-if="data.clickTrend > 0">+</template>{{ data.clickTrend }}
         </div>
         <div class="card__details-chip" v-if="data.codec !== 'UNKNOWN'">
           <span class="material-symbols-rounded">album</span> {{ data.codec }}
@@ -192,7 +190,7 @@ const logoError = ref(false);
     grid-row-gap: 10px;
     border: 1px solid #ffffff10;
     border-radius: 7px;
-    padding: 20px 17.5px;
+    padding: 18px;
     height: 100%;
 
     .card__image {
@@ -219,6 +217,10 @@ const logoError = ref(false);
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+
+      .material-symbols-rounded {
+        font-size: inherit !important;
+      }
     }
 
     .card__details {
@@ -226,12 +228,12 @@ const logoError = ref(false);
       font-size: 0.9em;
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 7px;
       max-height: 62px;
       overflow: hidden;
 
       .card__details-chip {
-        padding: 2px 8px;
+        padding: 2px 7px;
         border-radius: 5px;
         border: #ffffff10 solid 1px;
         background: #ffffff03;

@@ -128,9 +128,12 @@ onMounted(async () => await loadStationData());
             {{ $t('station.website') }}
           </td>
           <td class="station-info__table-row-value">
-            <a :href="station.homepageUrl" target="_blank">{{
-              station.homepageUrl
-            }}</a>
+            <a
+              :href="station.homepageUrl"
+              target="_blank"
+              style="text-wrap: wrap"
+              >{{ station.homepageUrl }}</a
+            >
           </td>
         </tr>
         <tr class="station-info__table-row" v-if="station.tags.length">
@@ -310,6 +313,7 @@ onMounted(async () => await loadStationData());
           a {
             color: #eaeaea;
             text-decoration: none;
+            word-break: break-word;
             &:hover {
               text-decoration: underline;
             }
