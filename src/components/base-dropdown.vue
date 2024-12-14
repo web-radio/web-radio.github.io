@@ -97,7 +97,7 @@ const selectedOption = computed(() =>
   background: #09090d;
   border-radius: 7px;
   border: 1px solid #ffffff10;
-  overflow: scroll;
+  overflow: auto;
   z-index: 20;
 
   .dropdown__option {
