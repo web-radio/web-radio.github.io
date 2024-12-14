@@ -16,10 +16,6 @@ const router = createRouter({
       component: () => import('@/views/settings-view.vue'),
     },
     {
-      path: '/map',
-      component: () => import('@/views/map-view.vue'),
-    },
-    {
       path: '/history',
       component: () => import('@/views/history-view.vue'),
     },

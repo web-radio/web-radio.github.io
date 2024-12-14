@@ -101,7 +101,7 @@ onBeforeMount(async () => {
   min-height: 100vh;
   color: #fff;
   font-family: 'Poppins', sans-serif !important;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
@@ -110,7 +110,7 @@ onBeforeMount(async () => {
     position: sticky;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1005;
     padding: 5px;
     font-size: 14px;

@@ -9,6 +9,12 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+@font-face {
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  src: url('/MaterialSymbolsRounded[FILL,GRAD,opsz,wght].woff2') format('woff');
+}
+
 // Selection
 
 *:focus-visible {
@@ -27,16 +33,6 @@ button {
 ::selection {
   color: black;
   background: #fff;
-}
-
-// Material symbols
-
-@font-face {
-  font-family: 'Material Symbols Rounded';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolsrounded/v181/syl7-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvLgyidOK7BDB_Qb9vUdV6_gjDK-P1Ju1_Zs-obHph2-jOcZTKPqw.woff2)
-    format('woff2');
 }
 
 .material-symbols-rounded {

@@ -21,11 +21,6 @@ const navigationItems: NavigationItem[] = [
     icon: 'search',
   },
   {
-    link: '/map',
-    text: 'nav.map',
-    icon: 'map',
-  },
-  {
     link: '/history',
     text: 'nav.history',
     icon: 'history',
@@ -58,7 +53,7 @@ function onNavigationItemClick() {
     >
       <span
         class="material-symbols-rounded"
-        style="font-size: 16px; line-height: normal"
+        style="font-size: 20px; line-height: normal; margin-right: 20px"
         >menu</span
       >
     </button>
@@ -161,7 +156,7 @@ nav.navigation {
   border-right: 1px solid #2b2b2b;
   overflow: auto;
   z-index: 1003;
-  transition: left 0.05s ease-out;
+  transition: left 0.05s ease-in-out;
 
   &.navigation--large {
     width: 300px;
