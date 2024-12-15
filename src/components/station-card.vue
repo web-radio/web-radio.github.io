@@ -30,6 +30,7 @@ const logoError = ref(false);
   >
     <div class="card__background">
       <img
+        loading="lazy"
         ref="stationLogo"
         class="card__image"
         :src="data.faviconUrl"
