@@ -20,7 +20,7 @@
     "leaflet": "^1.9.4",
     "patch-package": "^8.0.0",
     "pinia": "^2.0.28",
-    "radiobrowser-api-client": "^0.1.5",
+    "radiobrowser-api-client": "^0.1.6",
     "sass": "^1.63.6",
     "v-dropdown-menu": "^2.0.4",
     "vue": "^3.4.26",
